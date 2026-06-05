@@ -23,12 +23,10 @@ SOC Explanation Dashboard
 Expected structure:
 
 ```text
-project/
-├── models/
-│   ├── tfidf_sgd_parent.joblib
-│   └── tfidf_sgd_subtechnique.joblib
-├── reports/
 ├── soc_dashboard/
+│   └── models/
+│       ├── tfidf_sgd_parent.joblib
+│       └── tfidf_sgd_subtechnique.joblib 
 │   ├── app.py
 │   ├── ml_predict_then_llm_explain.py
 │   └── static/
