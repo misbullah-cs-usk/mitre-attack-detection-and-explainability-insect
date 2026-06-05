@@ -578,4 +578,3 @@ SOC Dashboard Demo
 ```
 
 The system is designed to support faster, more consistent, and more explainable SOC triage.
-
