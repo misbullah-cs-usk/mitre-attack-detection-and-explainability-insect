@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MITRE ATT&CK SOC Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MITRE ATT&CK SOC Dashboard</h1>
+    <p class="subtitle">ML-based ATT&CK prediction + Local LLM explanation</p>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Sysmon Event Input</h2>
+
+        <label>EventID</label>
+        <input id="EventID" value="1">
+
+        <label>Image</label>
+        <input id="Image" value="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+
+        <label>CommandLine</label>
+        <textarea id="CommandLine">powershell.exe -nop -w hidden -enc SQBFAFgA...</textarea>
+
+        <label>ParentImage</label>
+        <input id="ParentImage" value="C:\Windows\System32\cmd.exe">
+
+        <label>ParentCommandLine</label>
+        <textarea id="ParentCommandLine">cmd.exe /c powershell.exe -enc SQBFAFgA...</textarea>
+
+        <label>User</label>
+        <input id="User" value="corp\alice">
+
+        <label>Computer</label>
+        <input id="Computer" value="win10-01">
+
+        <label>DestinationIp</label>
+        <input id="DestinationIp">
+
+        <label>DestinationPort</label>
+        <input id="DestinationPort">
+
+        <label>TargetFilename</label>
+        <input id="TargetFilename">
+
+        <label>TargetObject</label>
+        <input id="TargetObject">
+
+        <button onclick="analyzeEvent()">Analyze Alert</button>
+      </div>
+
+      <div class="card">
+        <h2>Final Prediction</h2>
+        <div id="predictionBox" class="prediction empty">
+          No analysis yet.
+        </div>
+
+        <h2>Top Parent Techniques</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Technique</th>
+              <th>Confidence</th>
+            </tr>
+          </thead>
+          <tbody id="parentTop"></tbody>
+        </table>
+
+        <h2>Top Sub-techniques</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Technique</th>
+              <th>Confidence</th>
+            </tr>
+          </thead>
+          <tbody id="subTop"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card full">
+      <h2>LLM SOC Explanation</h2>
+      <div id="llmBox" class="llm">
+        No explanation yet.
+      </div>
+    </div>
+
+    <div class="card full">
+      <h2>Normalized Feature Text</h2>
+      <pre id="eventText"></pre>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
