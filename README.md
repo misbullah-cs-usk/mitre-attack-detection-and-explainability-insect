@@ -1,4 +1,5 @@
-# mitre-attack-detection-and-explainability-insect
+# Explainable Sequence-Based MITRE ATT&CK Technique Detection from Endpoint Telemetry Using AI and Large Language Models
+
 Implementation of MITRE ATT&amp;CK Detection and LLM Explainability - Cybersecurity and AI-based Analytics
 
 ## Source Code Order and Purpose
