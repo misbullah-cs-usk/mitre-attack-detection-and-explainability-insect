@@ -1,7 +1,5 @@
 # Explainable Sequence-Based MITRE ATT&CK Technique Detection from Endpoint Telemetry Using AI and Large Language Models
 
-# Automated MITRE ATT&CK Technique Prediction and Explainable SOC Dashboard
-
 ## Project Overview
 
 This project develops an AI-assisted cybersecurity system for predicting MITRE ATT&CK techniques from Windows/Sysmon logs. The system uses Splunk Attack Data as the main dataset and focuses on automatic ATT&CK technique classification, hierarchical parent/sub-technique prediction, sequence-based behavior learning, Transformer-based classification, and LLM-based SOC explanation.
