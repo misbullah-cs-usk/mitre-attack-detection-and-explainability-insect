@@ -1,0 +1,203 @@
+/home/alim/PhD-Experiments/Alim/CyberSecurity/env_cybersecurity/lib/python3.10/site-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+[1/8] Loading sequence data...
+Train sequences: 266
+Val sequences: 237
+Test sequences: 241
+Classes: 99
+[2/8] Encoding labels...
+[3/8] Creating Hugging Face datasets...
+[4/8] Tokenizing sequences...
+Map:   0%|          | 0/266 [00:00<?, ? examples/s]Map: 100%|██████████| 266/266 [00:00<00:00, 1252.08 examples/s]Map: 100%|██████████| 266/266 [00:00<00:00, 1236.98 examples/s]
+Map:   0%|          | 0/237 [00:00<?, ? examples/s]Map: 100%|██████████| 237/237 [00:00<00:00, 1532.08 examples/s]Map: 100%|██████████| 237/237 [00:00<00:00, 1507.86 examples/s]
+Map:   0%|          | 0/241 [00:00<?, ? examples/s]Map: 100%|██████████| 241/241 [00:00<00:00, 1567.44 examples/s]Map: 100%|██████████| 241/241 [00:00<00:00, 1541.47 examples/s]
+/home/alim/PhD-Experiments/Alim/CyberSecurity/env_cybersecurity/lib/python3.10/site-packages/transformers/modeling_utils.py:463: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at microsoft/MiniLM-L12-H384-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/alim/PhD-Experiments/Alim/CyberSecurity/env_cybersecurity/lib/python3.10/site-packages/transformers/optimization.py:411: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+[5/8] Loading Transformer model...
+[6/8] Setting training arguments...
+[7/8] Training sequence Transformer...
+  0%|          | 0/72 [00:00<?, ?it/s]You're using a BertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+/home/alim/PhD-Experiments/Alim/CyberSecurity/env_cybersecurity/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:71: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn(
+  1%|▏         | 1/72 [00:02<03:09,  2.67s/it]  3%|▎         | 2/72 [00:02<01:26,  1.23s/it]  4%|▍         | 3/72 [00:03<00:53,  1.30it/s]  6%|▌         | 4/72 [00:03<00:37,  1.81it/s]  7%|▋         | 5/72 [00:03<00:28,  2.32it/s]  8%|▊         | 6/72 [00:03<00:23,  2.79it/s] 10%|▉         | 7/72 [00:03<00:20,  3.22it/s] 11%|█         | 8/72 [00:04<00:18,  3.53it/s] 12%|█▎        | 9/72 [00:04<00:15,  4.03it/s]
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 25%|██▌       | 2/8 [00:00<00:00, 19.01it/s][A
+ 50%|█████     | 4/8 [00:00<00:00,  7.24it/s][A
+ 75%|███████▌  | 6/8 [00:00<00:00,  7.85it/s][A
+ 88%|████████▊ | 7/8 [00:00<00:00,  8.16it/s][A
+100%|██████████| 8/8 [00:00<00:00,  8.48it/s][A                                              
+                                             [A 12%|█▎        | 9/72 [00:05<00:15,  4.03it/s]
+100%|██████████| 8/8 [00:00<00:00,  8.48it/s][A
+                                             [A/home/alim/PhD-Experiments/Alim/CyberSecurity/env_cybersecurity/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:71: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn(
+ 14%|█▍        | 10/72 [00:06<00:47,  1.31it/s]                                                14%|█▍        | 10/72 [00:06<00:47,  1.31it/s] 15%|█▌        | 11/72 [00:06<00:36,  1.68it/s] 17%|█▋        | 12/72 [00:06<00:28,  2.08it/s] 18%|█▊        | 13/72 [00:06<00:23,  2.50it/s] 19%|█▉        | 14/72 [00:07<00:20,  2.90it/s] 21%|██        | 15/72 [00:07<00:17,  3.26it/s] 22%|██▏       | 16/72 [00:07<00:15,  3.57it/s] 24%|██▎       | 17/72 [00:07<00:14,  3.82it/s] 25%|██▌       | 18/72 [00:07<00:12,  4.29it/s]{'eval_loss': 4.590622425079346, 'eval_accuracy': 0.004219409282700422, 'eval_macro_f1': 8.48824378236143e-05, 'eval_weighted_f1': 3.5457220863028756e-05, 'eval_top_3_accuracy': 0.029535864978902954, 'eval_top_5_accuracy': 0.09282700421940929, 'eval_runtime': 1.0558, 'eval_samples_per_second': 224.47, 'eval_steps_per_second': 7.577, 'epoch': 1.0}
+{'loss': 4.5958, 'learning_rate': 1.7222222222222224e-05, 'epoch': 1.11}
+
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 25%|██▌       | 2/8 [00:00<00:00, 16.93it/s][A
+ 50%|█████     | 4/8 [00:00<00:00, 11.15it/s][A
+ 75%|███████▌  | 6/8 [00:00<00:00, 10.05it/s][A
+100%|██████████| 8/8 [00:00<00:00,  9.82it/s][A                                               
+                                             [A 25%|██▌       | 18/72 [00:08<00:12,  4.29it/s]
+100%|██████████| 8/8 [00:00<00:00,  9.82it/s][A
+                                             [A/home/alim/PhD-Experiments/Alim/CyberSecurity/env_cybersecurity/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:71: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn(
+ 26%|██▋       | 19/72 [00:09<00:37,  1.42it/s] 28%|██▊       | 20/72 [00:09<00:28,  1.79it/s]                                                28%|██▊       | 20/72 [00:09<00:28,  1.79it/s] 29%|██▉       | 21/72 [00:10<00:23,  2.20it/s] 31%|███       | 22/72 [00:10<00:19,  2.60it/s] 32%|███▏      | 23/72 [00:10<00:16,  2.99it/s] 33%|███▎      | 24/72 [00:10<00:14,  3.33it/s] 35%|███▍      | 25/72 [00:11<00:12,  3.62it/s] 36%|███▌      | 26/72 [00:11<00:11,  3.86it/s] 38%|███▊      | 27/72 [00:11<00:10,  4.34it/s]{'eval_loss': 4.579041004180908, 'eval_accuracy': 0.05907172995780591, 'eval_macro_f1': 0.0011268059076824017, 'eval_weighted_f1': 0.006589675055054045, 'eval_top_3_accuracy': 0.08016877637130802, 'eval_top_5_accuracy': 0.10970464135021098, 'eval_runtime': 0.8906, 'eval_samples_per_second': 266.116, 'eval_steps_per_second': 8.983, 'epoch': 2.0}
+{'loss': 4.5838, 'learning_rate': 1.4444444444444446e-05, 'epoch': 2.22}
+
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 25%|██▌       | 2/8 [00:00<00:00, 18.05it/s][A
+ 50%|█████     | 4/8 [00:00<00:00, 11.22it/s][A
+ 75%|███████▌  | 6/8 [00:00<00:00,  9.79it/s][A
+100%|██████████| 8/8 [00:00<00:00,  9.47it/s][A                                               
+                                             [A 38%|███▊      | 27/72 [00:12<00:10,  4.34it/s]
+100%|██████████| 8/8 [00:00<00:00,  9.47it/s][A
+                                             [A/home/alim/PhD-Experiments/Alim/CyberSecurity/env_cybersecurity/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:71: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn(
+ 39%|███▉      | 28/72 [00:13<00:31,  1.42it/s] 40%|████      | 29/72 [00:13<00:24,  1.79it/s] 42%|████▏     | 30/72 [00:13<00:19,  2.19it/s]                                                42%|████▏     | 30/72 [00:13<00:19,  2.19it/s] 43%|████▎     | 31/72 [00:13<00:15,  2.60it/s] 44%|████▍     | 32/72 [00:14<00:13,  2.98it/s] 46%|████▌     | 33/72 [00:14<00:11,  3.32it/s] 47%|████▋     | 34/72 [00:14<00:10,  3.61it/s] 49%|████▊     | 35/72 [00:14<00:09,  3.87it/s] 50%|█████     | 36/72 [00:14<00:08,  4.34it/s]{'eval_loss': 4.561914920806885, 'eval_accuracy': 0.05907172995780591, 'eval_macro_f1': 0.0011268059076824017, 'eval_weighted_f1': 0.006589675055054045, 'eval_top_3_accuracy': 0.1308016877637131, 'eval_top_5_accuracy': 0.17721518987341772, 'eval_runtime': 0.9059, 'eval_samples_per_second': 261.627, 'eval_steps_per_second': 8.831, 'epoch': 3.0}
+{'loss': 4.5685, 'learning_rate': 1.1666666666666668e-05, 'epoch': 3.33}
+
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 25%|██▌       | 2/8 [00:00<00:00,  7.50it/s][A
+ 38%|███▊      | 3/8 [00:00<00:00,  8.13it/s][A
+ 50%|█████     | 4/8 [00:00<00:00,  8.25it/s][A
+ 62%|██████▎   | 5/8 [00:00<00:00,  8.39it/s][A
+ 75%|███████▌  | 6/8 [00:00<00:00,  8.51it/s][A
+ 88%|████████▊ | 7/8 [00:00<00:00,  8.45it/s][A
+100%|██████████| 8/8 [00:00<00:00,  8.67it/s][A                                               
+                                             [A 50%|█████     | 36/72 [00:16<00:08,  4.34it/s]
+100%|██████████| 8/8 [00:00<00:00,  8.67it/s][A
+                                             [A/home/alim/PhD-Experiments/Alim/CyberSecurity/env_cybersecurity/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:71: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn(
+ 51%|█████▏    | 37/72 [00:16<00:26,  1.33it/s] 53%|█████▎    | 38/72 [00:17<00:20,  1.68it/s] 54%|█████▍    | 39/72 [00:17<00:15,  2.08it/s] 56%|█████▌    | 40/72 [00:17<00:12,  2.48it/s]                                                56%|█████▌    | 40/72 [00:17<00:12,  2.48it/s] 57%|█████▋    | 41/72 [00:17<00:10,  2.88it/s] 58%|█████▊    | 42/72 [00:18<00:09,  3.24it/s] 60%|█████▉    | 43/72 [00:18<00:08,  3.55it/s] 61%|██████    | 44/72 [00:18<00:07,  3.81it/s] 62%|██████▎   | 45/72 [00:18<00:06,  4.28it/s]{'eval_loss': 4.548639297485352, 'eval_accuracy': 0.05907172995780591, 'eval_macro_f1': 0.0011268059076824017, 'eval_weighted_f1': 0.006589675055054045, 'eval_top_3_accuracy': 0.1308016877637131, 'eval_top_5_accuracy': 0.17721518987341772, 'eval_runtime': 1.0572, 'eval_samples_per_second': 224.176, 'eval_steps_per_second': 7.567, 'epoch': 4.0}
+{'loss': 4.5421, 'learning_rate': 8.888888888888888e-06, 'epoch': 4.44}
+
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 25%|██▌       | 2/8 [00:00<00:00, 17.43it/s][A
+ 50%|█████     | 4/8 [00:00<00:00, 10.82it/s][A
+ 75%|███████▌  | 6/8 [00:00<00:00,  9.81it/s][A
+100%|██████████| 8/8 [00:00<00:00,  9.74it/s][A                                               
+                                             [A 62%|██████▎   | 45/72 [00:19<00:06,  4.28it/s]
+100%|██████████| 8/8 [00:00<00:00,  9.74it/s][A
+                                             [A/home/alim/PhD-Experiments/Alim/CyberSecurity/env_cybersecurity/lib/python3.10/site-packages/transformers/trainer.py:2245: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(best_model_path, map_location="cpu")
+                                                62%|██████▎   | 45/72 [00:20<00:06,  4.28it/s] 62%|██████▎   | 45/72 [00:20<00:12,  2.21it/s]
+/home/alim/PhD-Experiments/Alim/CyberSecurity/env_cybersecurity/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:71: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn(
+{'eval_loss': 4.539096355438232, 'eval_accuracy': 0.05907172995780591, 'eval_macro_f1': 0.0011268059076824017, 'eval_weighted_f1': 0.006589675055054045, 'eval_top_3_accuracy': 0.14767932489451477, 'eval_top_5_accuracy': 0.21518987341772153, 'eval_runtime': 0.8959, 'eval_samples_per_second': 264.55, 'eval_steps_per_second': 8.93, 'epoch': 5.0}
+{'train_runtime': 20.3498, 'train_samples_per_second': 104.571, 'train_steps_per_second': 3.538, 'train_loss': 4.568132019042968, 'epoch': 5.0}
+[8/8] Final test evaluation...
+  0%|          | 0/8 [00:00<?, ?it/s] 25%|██▌       | 2/8 [00:00<00:00, 18.66it/s] 50%|█████     | 4/8 [00:00<00:00, 10.99it/s] 75%|███████▌  | 6/8 [00:00<00:00,  9.95it/s]100%|██████████| 8/8 [00:00<00:00,  9.62it/s]100%|██████████| 8/8 [00:00<00:00, 10.08it/s]
+{'test_loss': 4.578022480010986, 'test_accuracy': 0.05394190871369295, 'test_macro_f1': 0.0010339616638829238, 'test_weighted_f1': 0.005521612702976444, 'test_top_3_accuracy': 0.08713692946058091, 'test_top_5_accuracy': 0.11203319502074689, 'test_runtime': 0.8992, 'test_samples_per_second': 268.002, 'test_steps_per_second': 8.896}
+              precision    recall  f1-score   support
+
+       T1003       0.00      0.00      0.00         1
+   T1003.001       0.00      0.00      0.00         3
+   T1003.002       0.00      0.00      0.00         1
+   T1003.003       0.00      0.00      0.00         1
+       T1016       0.00      0.00      0.00         1
+       T1018       0.00      0.00      0.00         2
+       T1020       0.00      0.00      0.00         1
+   T1021.003       0.00      0.00      0.00         4
+   T1021.006       0.00      0.00      0.00         3
+       T1027       0.00      0.00      0.00         3
+       T1033       0.00      0.00      0.00         4
+       T1036       0.00      0.00      0.00         1
+   T1036.003       0.00      0.00      0.00         3
+   T1037.001       0.00      0.00      0.00         1
+       T1047       0.00      0.00      0.00         5
+   T1048.003       0.00      0.00      0.00         5
+       T1049       0.00      0.00      0.00         1
+   T1053.002       0.00      0.00      0.00         1
+   T1053.005       0.00      0.00      0.00         8
+       T1055       0.00      0.00      0.00         9
+       T1059       0.00      0.00      0.00         4
+   T1059.001       0.05      1.00      0.10        13
+   T1059.003       0.00      0.00      0.00         4
+   T1059.005       0.00      0.00      0.00         2
+       T1068       0.00      0.00      0.00         3
+   T1069.001       0.00      0.00      0.00         1
+   T1069.002       0.00      0.00      0.00         2
+       T1070       0.00      0.00      0.00         2
+   T1070.001       0.00      0.00      0.00         1
+   T1070.005       0.00      0.00      0.00         1
+   T1078.002       0.00      0.00      0.00         1
+       T1082       0.00      0.00      0.00         1
+   T1087.001       0.00      0.00      0.00         1
+   T1087.002       0.00      0.00      0.00         2
+   T1090.003       0.00      0.00      0.00         1
+       T1105       0.00      0.00      0.00         3
+       T1112       0.00      0.00      0.00         9
+       T1127       0.00      0.00      0.00         2
+   T1127.001       0.00      0.00      0.00         2
+   T1136.001       0.00      0.00      0.00         2
+       T1140       0.00      0.00      0.00         2
+       T1189       0.00      0.00      0.00         1
+       T1190       0.00      0.00      0.00         4
+       T1197       0.00      0.00      0.00         1
+       T1201       0.00      0.00      0.00         1
+       T1204       0.00      0.00      0.00         1
+   T1204.002       0.00      0.00      0.00         3
+   T1218.001       0.00      0.00      0.00         1
+   T1218.002       0.00      0.00      0.00         1
+   T1218.004       0.00      0.00      0.00         2
+   T1218.005       0.00      0.00      0.00         2
+   T1218.007       0.00      0.00      0.00         1
+   T1218.009       0.00      0.00      0.00         1
+   T1218.010       0.00      0.00      0.00         1
+   T1218.011       0.00      0.00      0.00         2
+   T1218.012       0.00      0.00      0.00         1
+       T1220       0.00      0.00      0.00         1
+   T1222.001       0.00      0.00      0.00         1
+       T1482       0.00      0.00      0.00         2
+       T1485       0.00      0.00      0.00         6
+       T1486       0.00      0.00      0.00         2
+       T1490       0.00      0.00      0.00         2
+   T1497.003       0.00      0.00      0.00         1
+   T1505.003       0.00      0.00      0.00         5
+       T1531       0.00      0.00      0.00         1
+   T1543.003       0.00      0.00      0.00         4
+   T1546.001       0.00      0.00      0.00         1
+   T1546.002       0.00      0.00      0.00         1
+   T1546.003       0.00      0.00      0.00         2
+   T1546.008       0.00      0.00      0.00         1
+   T1546.011       0.00      0.00      0.00         1
+   T1546.012       0.00      0.00      0.00         1
+   T1546.015       0.00      0.00      0.00         2
+   T1547.001       0.00      0.00      0.00         2
+   T1547.003       0.00      0.00      0.00         1
+   T1547.010       0.00      0.00      0.00         2
+   T1547.012       0.00      0.00      0.00         3
+       T1548       0.00      0.00      0.00         3
+   T1548.002       0.00      0.00      0.00         5
+       T1550       0.00      0.00      0.00         1
+   T1550.002       0.00      0.00      0.00         1
+   T1550.003       0.00      0.00      0.00         2
+   T1552.002       0.00      0.00      0.00         1
+   T1553.004       0.00      0.00      0.00         1
+       T1555       0.00      0.00      0.00         1
+   T1558.003       0.00      0.00      0.00         3
+   T1560.001       0.00      0.00      0.00         1
+   T1561.002       0.00      0.00      0.00         1
+   T1562.001       0.00      0.00      0.00        14
+   T1562.004       0.00      0.00      0.00         1
+   T1566.001       0.00      0.00      0.00        12
+   T1566.002       0.00      0.00      0.00         1
+   T1569.002       0.00      0.00      0.00         2
+       T1572       0.00      0.00      0.00         3
+   T1574.009       0.00      0.00      0.00         1
+   T1574.011       0.00      0.00      0.00         1
+   T1588.002       0.00      0.00      0.00         1
+   T1590.002       0.00      0.00      0.00         1
+       T1595       0.00      0.00      0.00         2
+
+    accuracy                           0.05       241
+   macro avg       0.00      0.01      0.00       241
+weighted avg       0.00      0.05      0.01       241
+
+Saved model: models/sequence_transformer_subtechnique/best_model
+Saved report: reports/sequence_transformer_subtechnique_report.txt
